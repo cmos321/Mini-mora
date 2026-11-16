@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema claro -->
+    <style name="Base.Theme.Mini8Firebase" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/acento</item>
+        <item name="android:windowBackground">@color/gris_fondo</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.Mini8Firebase" parent="Base.Theme.Mini8Firebase" />
+</resources>

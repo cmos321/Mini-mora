@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="acento">#FF00897B</color>
+    <color name="negro">#FF000000</color>
+    <color name="blanco">#FFFFFFFF</color>
+    <color name="gris_fondo">#FFF4F6F6</color>
+    <color name="gris_texto">#FF6F7878</color>
+    <color name="gris_linea">#FFDDE3E3</color>
+</resources>

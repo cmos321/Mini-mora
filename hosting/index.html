@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Mini8 Firebase</title>
+  <style>
+    :root {
+      --fondo: #f4f6f6;
+      --panel: #ffffff;
+      --tinta: #16302d;
+      --apagado: #5c6d6b;
+      --linea: #d9e2e1;
+      --acento: #00897b;
+      --acento-suave: #def3f0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fondo: #0f1a19;
+        --panel: #172625;
+        --tinta: #e6f1ef;
+        --apagado: #9db3b0;
+        --linea: #2b403e;
+        --acento: #3cc4b3;
+        --acento-suave: #1b3a37;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--fondo);
+      color: var(--tinta);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+    header, main, footer { max-width: 720px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+
+    header { padding-top: 56px; padding-bottom: 24px; }
+    h1 {
+      margin: 0 0 12px;
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: clamp(2rem, 6vw, 3rem);
+      line-height: 1.1;
+      color: var(--acento);
+    }
+    header p { margin: 0; color: var(--apagado); font-size: 1.1rem; max-width: 52ch; }
+
+    h2 {
+      margin: 40px 0 12px;
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: 1.5rem;
+    }
+
+    ol.servicios { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+    ol.servicios li {
+      counter-increment: s;
+      display: grid; grid-template-columns: 36px 1fr; gap: 4px 12px;
+      padding: 16px 0; border-top: 1px solid var(--linea);
+    }
+    ol.servicios li:last-child { border-bottom: 1px solid var(--linea); }
+    ol.servicios li::before {
+      content: counter(s);
+      grid-row: span 2;
+      width: 32px; height: 32px; border-radius: 50%;
+      display: grid; place-items: center;
+      background: var(--acento-suave); color: var(--acento);
+      font-weight: 700;
+    }
+    ol.servicios b { font-size: 1.05rem; }
+    ol.servicios span { color: var(--apagado); }
+
+    dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 8px 24px; }
+    dt { color: var(--apagado); }
+    dd { margin: 0; font-weight: 600; }
+    code { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: .9em; }
+
+    .planes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+    .plan { padding: 16px 20px; border: 1px solid var(--linea); border-radius: 10px; background: var(--panel); }
+    .plan.spark { background: var(--acento-suave); border-color: transparent; }
+    .plan h3 { margin: 0 0 4px; font-size: 1.05rem; }
+    .plan p { margin: 0; color: var(--apagado); }
+    .plan.spark p { color: var(--tinta); }
+
+    footer { padding-top: 40px; padding-bottom: 40px; color: var(--apagado); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mini8 Firebase</h1>
+    <p>Una app Android sencilla que usa los ocho servicios principales de Firebase. Esta página está publicada con Firebase Hosting.</p>
+  </header>
+
+  <main>
+    <h2>Servicios que usa la app</h2>
+    <ol class="servicios">
+      <li><b>Cloud Firestore</b><span>Lista de tareas que se pueden crear, ver, marcar como hechas, editar y eliminar.</span></li>
+      <li><b>Realtime Database</b><span>Un contador compartido que cambia al instante en todos los celulares.</span></li>
+      <li><b>Authentication</b><span>Registro e inicio de sesión con correo y contraseña.</span></li>
+      <li><b>Cloud Storage</b><span>Foto de perfil: subir, ver y eliminar.</span></li>
+      <li><b>Cloud Messaging</b><span>Notificaciones enviadas desde la consola de Firebase.</span></li>
+      <li><b>Hosting</b><span>Esta misma página web.</span></li>
+      <li><b>Analytics</b><span>Eventos que registran qué botones usa la persona.</span></li>
+      <li><b>Crashlytics</b><span>Reportes de errores de la app.</span></li>
+    </ol>
+
+    <h2>Datos del proyecto</h2>
+    <dl>
+      <dt>Paquete</dt><dd><code>com.example.mini8firebase</code></dd>
+      <dt>Lenguaje</dt><dd>Java con diseños XML</dd>
+      <dt>Versión mínima</dt><dd>Android 7.0</dd>
+    </dl>
+
+    <h2>Planes de Firebase</h2>
+    <div class="planes">
+      <div class="plan spark">
+        <h3>Spark</h3>
+        <p>Gratuito, con cuotas y límites de utilización. Es el plan de este proyecto.</p>
+      </div>
+      <div class="plan">
+        <h3>Blaze</h3>
+        <p>De pago, según el consumo de determinados servicios.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>Proyecto de Diseño de Bases de Datos.</footer>
+</body>
+</html>

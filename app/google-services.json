@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "777874526725",
+    "firebase_url": "https://mini-mora-default-rtdb.firebaseio.com",
+    "project_id": "mini-mora",
+    "storage_bucket": "mini-mora.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777874526725:android:d5d0cf4e713532d1ae426c",
+        "android_client_info": {
+          "package_name": "com.example.mini8firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6Ws-x3gxrdjXYUs0cjZOnGCr5E4Rqvzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
